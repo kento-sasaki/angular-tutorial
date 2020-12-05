@@ -1,6 +1,2 @@
 <h1>Angular After Tutorial</h1>
-<ul>
-  <li *ngFor="let user of users">
-    #{{ user.id }} {{ user.first_name }} {{ user.last_name }}
-  </li>
-</ul>
+<app-user-list [users]="users"></app-user-list>
