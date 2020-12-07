@@ -13,6 +13,15 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 
+import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
+import { NzListModule } from 'ng-zorro-antd/list';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+import { NzTagModule } from 'ng-zorro-antd/tag';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+
 registerLocaleData(en);
 
 @NgModule({
@@ -27,7 +36,15 @@ registerLocaleData(en);
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NzPageHeaderModule,
+    NzListModule,
+    NzCheckboxModule,
+    NzTagModule,
+    NzInputModule,
+    NzDatePickerModule,
+    NzButtonModule,
+    NzGridModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
