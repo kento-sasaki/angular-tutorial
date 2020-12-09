@@ -3,6 +3,10 @@ import { increment, decrement, reset } from './counter.actions';
 
 export const initialState = 0;
 
+interface Action {
+  type: string;
+}
+
 const _counterReducer = createReducer(
   initialState,
   on(increment, (state) => state + 1),
@@ -10,6 +14,6 @@ const _counterReducer = createReducer(
   on(reset, (state) => 0),
 );
 
-export function counterReducer(state: number, action: any) {
+export function counterReducer(state: number, action: Action) {
   return _counterReducer(state, action);
 }
