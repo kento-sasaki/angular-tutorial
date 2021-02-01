@@ -1,5 +1,7 @@
-import { createAction } from '@ngrx/store';
+import actionCreaterFactory from 'typescript-fsa'
 
-export const increment = createAction('[Counter Component] Increment');
-export const decrement = createAction('[Counter Component] Decrement');
-export const reset = createAction('[Counter Component] Reset');
+const actionCreator = actionCreaterFactory()
+
+export const increment = actionCreator('[Counter Component] Increment');
+export const decrement = actionCreator('[Counter Component] Decrement');
+export const reset = actionCreator('[Counter Component] Reset');
